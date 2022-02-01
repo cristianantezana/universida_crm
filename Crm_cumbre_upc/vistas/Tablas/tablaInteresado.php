@@ -4,7 +4,8 @@
 	$objCon = new Conexion();
 	$conexion = $objCon->conectar();
 
-	$sql = "SELECT  id_contacto,c.nombre, c.apellido, ca.carrera, c.telefono FROM `contactos` c INNER JOIN carrera_interesada ca ON c.carrera_interesada = ca.id_carrera WHERE instancia =5;";
+	$sql = "SELECT  id_contacto,c.nombre, c.apellido, ca.carrera, c.telefono FROM `contactos` 
+	c INNER JOIN carrera_interesada ca ON c.carrera_interesada = ca.id_carrera WHERE instancia =5;";
 	$result = mysqli_query($conexion, $sql); 
 ?>
 <?php
